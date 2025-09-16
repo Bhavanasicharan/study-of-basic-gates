@@ -1,4 +1,6 @@
 ### study-of-basic-gates
+ Name: B Charan Reddy
+ Reg No: 212224240026
 
 **AIM:** 
 
@@ -12,7 +14,7 @@ Software – Quartus prime
 
 Introduction Logic gates are the basic building blocks of any digital system. Logic gates are electronic circuits having one or more than one input and only one output. The relationship between the input and the output is based on a certain logic. Based on this, logic gates are named as
 
-AND gate OR gate NOT gate NAND gate NOR gate Ex-OR gate Ex-NOR gate
+AND gate OR gate NOT gate NAND gate NOR gate Ex-OR gate Ex-NOR gate.
 
 **AND gate**
 
@@ -66,34 +68,53 @@ Y= A⊕B
 
 Program for logic gates and verify its truth table in quartus using Verilog programming
 
- Developed by:CHARAN REDDY
- RegisterNumber: 212224240026
- ```
-module logicgates(a, b, c); 
-   input a; 
-   input b; 
-   output  [6:0] c; 
+module logic_gate(a,b,c1,c2,c3,c4,c5,c6,c7);
 
-assign c[0]= a & b; 
-assign c[1]= a | b; 
-assign c[2]= ~(a & b); 
-assign c[3]= ~(a | b); 
-assign c[4]= a ^ b; 
-assign c[5]= ~(a ^ b); 
-assign c[6]= ~ a;
+input a,b;
+
+output c1,c2,c3,c4,c5,c6,c7;
+
+not g1(c1,a);
+
+and g2(c2,a,b);
+
+or g3(c3,a,b);
+
+nand g4(c4,a,b);
+
+nor g5(c5,a,b);
+
+xor g6(c6,a,b);
+
+xnor g7(c7,a,b);
+
 endmodule
-```
+
+
+![Screenshot_2024-11-05_083338 2](https://github.com/user-attachments/assets/03c3a288-a804-4c46-b099-7298f6b4174c)
+
+ 
 **Logic symbol & Truthtable**
-![Screenshot 2025-03-19 051136](https://github.com/user-attachments/assets/9d41aa16-69c0-42c9-a504-9f0eabb87b6b)
+A	      B	AND(G1)	OR(G2)	NOT(G3)	NAND(G4)	NOR(G5)	EX-OR(G6)	EX-NOR(G7)
+
+0	0	0	0	1	1	1	1	0
+
+0	1	0	1	1	1	0	1	1
+
+1	0	0	1	0	1	0	1	1
+
+1	1	1	1	0	0	0	0	0
+
+![image](https://github.com/user-attachments/assets/d305eb06-af65-4f5f-af2a-f00b864a1bc1)
+
 
 
 **RTL realization Output:** 
-![Screenshot 2025-03-19 051224](https://github.com/user-attachments/assets/607b3232-1ddd-48c3-85b2-04039f9f9696)
 
 **RTL**
-![Screenshot 2025-03-19 051258](https://github.com/user-attachments/assets/1fc74f3f-50ba-4430-a162-8424e86f682d)
+
+<img width="1920" height="1106" alt="image" src="https://github.com/user-attachments/assets/59502097-20b4-410a-ba6d-e30b392c7eec" />
+
 
 **Result:**
- thus the output of basic logic gates are verified by simulating and synthezising the VERILOG code.
-
-
+Thus the different digital IC's are studied and truth table for different logic gates are verified
